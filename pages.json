@@ -1,0 +1,77 @@
+{
+	"pages": [{
+		"path": "pages/login/login",
+		"name": "login",
+		"aliasPath": "/",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/home/home",
+		"name": "home",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/goods/goods",
+		"name": "goods",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/record/record",
+		"name": "record",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/user/user",
+		"name": "user",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"selectedColor": "#000000",
+		"list": [{
+			"pagePath": "pages/home/home",
+			"text": "首页",
+			"iconPath": "static/home.png",
+			"selectedIconPath": "static/home-filling.png"
+		}, {
+			"pagePath": "pages/goods/goods",
+			"text": "器械",
+			"iconPath": "static/work.png",
+			"selectedIconPath": "static/work-filling.png"
+		}, {
+			"pagePath": "pages/record/record",
+			"text": "记录",
+			"iconPath": "static/history.png",
+			"selectedIconPath": "static/history-filling.png"
+		}, {
+			"pagePath": "pages/user/user",
+			"text": "我的",
+			"iconPath": "static/user.png",
+			"selectedIconPath": "static/user-filling.png"
+		}]
+	}
+}
