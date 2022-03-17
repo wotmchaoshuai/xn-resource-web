@@ -12,8 +12,10 @@
 			</uni-forms>
 			<button @click="submit">登录</button>
 		</uni-card>
+		
+		<!-- 登录失败的弹窗 -->
 		<uni-popup ref="popup" type="message">
-			<uni-popup-message type="error" message="登录失败" :duration="2000"></uni-popup-message>
+			<uni-popup-message type="error" message="账号或密码错误!" :duration="2000"></uni-popup-message>
 		</uni-popup>
 	</view>
 </template>
@@ -24,7 +26,7 @@
 			return {
 				formData: {
 					username: "",
-					password: ""
+					password: "",
 				},
 				rules: {
 					username: {
@@ -52,9 +54,13 @@
 		},
 		methods: {
 			submit() {
+				
+				//验证表单元素
 				this.$refs.form.validate().then(res => {
 					if (res.username === 'admin' && res.password === '123456') {
 						console.log('welcome!');
+						
+						//存储token值，用来验证路由守卫
 						uni.setStorageSync('token', 'right');
 						uni.switchTab({
 							url: '/pages/home/home'
@@ -62,7 +68,6 @@
 					} else {
 						console.log('no!');
 						this.$refs.popup.open('top');
-						this.formData.username = '';
 						this.formData.password = '';
 					}
 

@@ -26,6 +26,10 @@ const router = createRouter({
 			name: 'user'
 		},
 		{
+			path: '/pages/search/search',
+			name: 'search'
+		},
+		{
 			path: '*',
 			redirect: (to) => {
 				return {
@@ -37,6 +41,7 @@ const router = createRouter({
 });
 //全局路由前置守卫
 router.beforeEach((to, from, next) => {
+	
 	if (to.name === "login")
 		return next()
 	const token = uni.getStorageSync('token');
@@ -46,10 +51,13 @@ router.beforeEach((to, from, next) => {
 		})
 	}
 	
-	/*if (to.name === "login")
+	
+	/* if (to.name === "login")
 		return next({
 			name: "goods"
-		})*/
+		}) */
+		
+		
 	next()
 });
 // 全局路由后置守卫
